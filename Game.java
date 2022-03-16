@@ -55,17 +55,22 @@ public class Game {
 
         return true;
     }
-    public int checkWin(){
+    public boolean checkWin(){
+        int k=0;
         for(int i=0;i<4;i++)//checkWin() just loop through the map arr by row and col return if in order or not
         {
             for(int j=0;j<4;j++)
             {
-                System.out.print(map[i][j]);//print the 
-                System.out.print(" ");
+               k++;
+               if(map[i][j]==k+1){
+                   return true;
+               }else
+               {
+                   return false;
+               }
             }
-            System.out.println(" ");
+            
         }
-        return 0;
     }
     public int[][] getMap(){
         return map;//getMap just return the map 2d arr
