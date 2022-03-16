@@ -10,7 +10,6 @@ public class Game {
     public Game() {
         map = new int[4][4];
         move = 0;
-
         //randomly assign 16 number into map
         Random rand = new Random();
         Set<Integer> set = new LinkedHashSet<Integer>();
@@ -26,7 +25,6 @@ public class Game {
             }
         }
     }
-    
     //Try to move a number in the map return if the move is valid
     public boolean move(int y, int x) {
         int toX = -1, toY = -1;
@@ -57,4 +55,21 @@ public class Game {
 
         return true;
     }
+    public int checkWin(){
+        for(int i=0;i<4;i++)
+        {
+            for(int j=0;j<4;j++)
+            {
+                System.out.print(map[i][j]);//print the 
+                System.out.print(" ");
+            }
+            System.out.println(" ");
+        }
+    }
+    public int[][] getMap(){
+        return map;//getMap just return the map 2d arr
+    }
+    public int getMove(){
+        return move;//getMove just return the move
+    } 
 }
