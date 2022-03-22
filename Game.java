@@ -62,13 +62,15 @@ public class Game {
             for(int j=0;j<4;j++)
             {
                k++;
-               if(map[i][j]==k+1){
+               if(map[i][j]==k+1)
+			   {
                    return true;
                }else
                {
                    return false;
                }
             }
+			j=0;
             
         }
     }
